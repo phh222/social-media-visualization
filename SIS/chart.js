@@ -1,4 +1,4 @@
-class Chart {
+export default class Chart {
     constructor(){
         this._width = 600;
         this._height = 400;
@@ -120,14 +120,14 @@ class Chart {
     }
 
     renderChart(){
-        /*if (!this._box){
+        if (!this._box){
             this._box = d3.select('body')
                             .append('div')
                             .attr('class','box');
-        }*/
+        }
 
         if (!this._svg){
-            this._svg = d3.select("body").append('svg')
+            this._svg = this._box.append('svg')
                             .attr('width', this._width)
                             .attr('height', this._height);
         }
